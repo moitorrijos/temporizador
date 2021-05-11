@@ -23,9 +23,15 @@ var x = setInterval(function() {
   if ( minutes < 10 ) minutes = "0" + minutes;
   if ( seconds < 10 ) seconds = "0" + seconds;
 
-  // Display the result in the element with id="timer"
-  document.getElementById("timer").innerHTML = days + ":" + hours + ":"
-  + minutes + ":" + seconds;
+  var ddays = document.getElementById("days");
+  var dhours = document.getElementById("hours");
+  var dminutes = document.getElementById("minutes");
+  var dseconds = document.getElementById("seconds");
+
+  ddays.innerHTML = days;
+  dhours.innerHTML = hours;
+  dminutes.innerHTML = minutes;
+  dseconds.innerHTML = seconds;
 
   // If the count down is finished, write some text
   if (distance < 0) {
